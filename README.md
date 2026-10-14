@@ -39,12 +39,13 @@
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
+This classifier sorts posts from `r/movies`, a high-volume public Reddit community dedicated to film discussions, reviews, and news. Film discourse on `r/movies` ranges from deeply researched structural breakdowns to unsubstantiated contrarian claims and immediate emotional reactions. TakeMeter classifies each post into three distinct categories (`analysis`, `hot_take`, `reaction`) to separate substantive critiques from noise and visceral first impressions.
 
+### Candidate Distinctions Observed in the Text
 
-
----
+1. **Concrete verification vs. bare assertion:** Substantive posts cite specific scene mechanics, named actors/directors, timestamps, or technical film elements (e.g. noting that Constance Miller is already in the shop in *McCabe & Mrs. Miller*, or examining cut sequences in *The Sixth Sense*). Bare takes declare a film "a complete waste of a concept" or "the last great thriller" without citing specific evidence.
+2. **Immediate post-watch emotional state vs. retrospective thesis:** Reaction posts reflect immediate visceral feelings right as the credits roll (e.g., "just finished watching... what a mindf*ck", "genuinely touched my heart"), whereas analytical posts build a structured argument about themes, pacing, or cinematic choices.
+3. **Assertive thesis vs. crowdsourced inquiry:** Some posts argue a definitive viewpoint ("Halloween III is a good movie and anthology was the right concept"), while others solicit external input or ask the community open questions ("What are your most hated plot contrivances?", "Where do you sit in the cinema?").
 
 ## Label Taxonomy
 
