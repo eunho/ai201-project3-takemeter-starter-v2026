@@ -5,6 +5,6 @@
 #
 # Delete the examples below and put yours in.
 
-analysis: makes an argument backed by a specific, checkable fact
-hot_take: a confident claim with no support offered
-reaction: an immediate response to something that just happened
+analysis: Makes an argument about a film's quality, meaning, or production backed by a specific, checkable fact or scene detail.
+hot_take: A confident, contentious, or evaluative claim about a film, director, or cinematic trend with no verifiable evidence or breakdown offered.
+reaction: An immediate personal reflection, visceral emotional response, or open community query focused on feelings rather than constructing an argument.

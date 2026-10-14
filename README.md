@@ -49,41 +49,42 @@ This classifier sorts posts from `r/movies`, a high-volume public Reddit communi
 
 ## Label Taxonomy
 
-<!-- Each label: a one-sentence definition and two real examples from your
-     reading. Then your decision rule for the hardest boundary.
+### `analysis`
 
-     The decision rule is worth a point on its own and it's the thing most
-     people leave out. Every taxonomy has a hardest boundary. Name yours. -->
-
-### `label_one`
-
-**Definition:**
+**Definition:** Makes an argument about a film's quality, meaning, or production backed by a specific, checkable fact or scene detail.
 
 **Example 1:**
->
+> "Trivia of the Week: Constance Miller was already in the shop when McCabe went to buy three girls for $200 in McCabe & Mrs. Miller (1971). Do you ever wonder how Constance Miller suddenly shows up and starts talking McCabe into letting her manage the whorehouse? Well, it's kind of a cool, blink-and-you'll-miss-it detail, but she's already inside the shop in Bearpaw (the next town) when McCabe goes to buy three girls for $200 from the pimp."
 
 **Example 2:**
->
+> "After surely 8 billion rewatches of The Sixth Sense, I only now just noticed something [SPOILERS]. Obviously if you haven’t watched it yet, why are you still reading. I feel so dumb. I’ve seen this film so many times and only just now noticed right after Crowe gets shot and it cuts to the next fall, Malcolm is sitting in the chair and wearing the exact same clothes he dies in, because ghosts don't change clothes."
 
-### `label_two`
+### `hot_take`
 
-**Definition:**
+**Definition:** A confident, contentious, or evaluative claim about a film, director, or cinematic trend with no verifiable evidence or breakdown offered.
 
 **Example 1:**
->
+> "Halloween III: It’s a good movie. I wish they stayed with the anthology concept instead of going back to Michael Myers. But I guess everyone wanted a franchise killer in the 80s.. The music John Carpenter did on the synth is great. Don’t forget to watch the big give-away at 9:00. 18 days till Halloween- Silver Shamrock!"
 
 **Example 2:**
->
+> "Gone Girl (2014) - the last great Hollywood thriller? I remember this film being a real event. Based on a bestseller, Fincher directing, Affleck’s renaissance and a starring role for the mysterious Rosamund Pike. And it didn’t disappoint. It felt like a truly high-end thriller. Clever, witty, dark, daring and with multiple twists and turns. It’s 2.5 hours and flies by."
+
+### `reaction`
+
+**Definition:** An immediate personal reflection, visceral emotional response, or open community query focused on feelings rather than constructing an argument.
+
+**Example 1:**
+> "Apocalypse Now: what a mindf*ck... I just finished watching AN: Redux and even though I knew it wasn't going to be a typical military movie I'm still wondering what the hell I just saw. I can't even imagine watching that in a dark theater. I wonder how many people just sat there in shocked silence during the credits."
+
+**Example 2:**
+> "What's your top movie for the spooky season? Just tryna nail down as many good Halloween/horror/horror adjacent movies to stock up on for the festivities and I know most people here have good taste probably. My favorite for this time of year is John Carpenters 'In the Mouth of Madness'. Cheers, and may your nightmares be spooky ghost scary."
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `analysis` vs. `hot_take`
 
 **The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
-
-
+If the post cites a specific, checkable fact from the film or its production (such as a named scene event, direct dialogue quote, specific timestamp, or verified production detail) to support its thesis, it is classified as `analysis`—even if the overall tone is provocative or argumentative. If the post offers only subjective value judgments or broad adjectives ("masterpiece", "ruined", "overrated", "flies by") without grounding them in verifiable evidence, it is classified as `hot_take`.
 
 ---
 
