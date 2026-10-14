@@ -51,61 +51,48 @@ whether you hit them:
 
 ---
 
-## 1.
+## 1. Overall Accuracy on Held-Out Split
 
-<!-- Your criterion. It must name a number. -->
-
-
+The fine-tuned model achieves an overall classification accuracy of at least **0.65** on the held-out test split.
 
 **Why this target:**
-
-
+With three labels, a random guesser achieves roughly 33%, and a naive majority baseline achieves around 35–40% on balanced data. An accuracy of 0.65 represents a substantial jump over chance, meaning the classifier correctly sorts at least two out of every three posts on held-out text before it can be trusted as a community filter.
 
 ---
 
-## 2.
+## 2. Macro F1 and Per-Label Floor
 
-<!-- Your criterion. -->
-
-
+The macro-averaged F1 score is at least **0.62**, and every individual label (`analysis`, `hot_take`, `reaction`) achieves an F1 of at least **0.55** on the held-out test split.
 
 **Why this target:**
-
-
+Macro F1 weights all three classes equally, preventing high accuracy on an easier class (e.g., `reaction`) from concealing poor performance on the harder `analysis` vs. `hot_take` boundary. The 0.55 per-label floor ensures the model genuinely learns to distinguish all three categories rather than collapsing one into zero recall.
 
 ---
 
-## 3.
+## 3. Dataset Distribution Balance
 
-<!-- Your criterion. -->
-
-
+No single label exceeds **45%** of the dataset, and the smallest label accounts for at least **25%** of all 200 labeled examples in `labels.csv` (between 50 and 90 examples per label).
 
 **Why this target:**
-
-
+The project brief permits up to a 70% class share, but in a three-label setup, any class exceeding 45% skews the model's loss landscape toward predicting that class whenever uncertain. Keeping all three classes between 25% and 45% ensures at least 50 total examples and at least 7–8 held-out test examples per class under a 70/15/15 stratified split, preventing wild F1 swings caused by single-sample test errors.
 
 ---
 
-## 4.
+## 4. Annotator Agreement on Staff Calibration Set
 
-<!-- Your criterion. -->
-
-
+My annotations achieve an agreement rate of at least **70%** (at least 21 out of 30 matched posts) against the staff reference labels in `data/staff_labels.csv` when evaluated using `agreement.py`.
 
 **Why this target:**
-
-
+A classifier cannot perform more consistently than the human annotator who taught it. Achieving 70% agreement on a 30-post calibration set with staff taxonomy proves that the written decision rules are unambiguous and reproducible by independent readers, while acknowledging that natural language discourse carries roughly 20–30% genuine edge-case ambiguity.
 
 ---
 
-## 5.
+## 5. High-Confidence Calibration
 
-<!-- Your criterion. -->
-
-
+For all test predictions where the model outputs a predicted class probability of at least **0.80**, the empirical accuracy on those predictions is at least **0.80**.
 
 **Why this target:**
+In a real-world community triage pipeline, high-confidence flags are often automated without human review. If the model expresses 80%+ certainty but is wrong more than 20% of the time, downstream systems cannot trust its confidence scores; requiring precision to match or exceed the confidence threshold validates that the model is well-calibrated and not prone to overconfident hallucinations on boundary cases.
 
 
 
