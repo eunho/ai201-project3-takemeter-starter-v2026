@@ -138,44 +138,46 @@ Cold first, AI pre-labelled second. The first 20 posts were labeled completely c
 
 ## The Training Run
 
-<!-- Your starting model, your settings, and anything you changed and why. -->
-
 **Base model:**
+`distilbert-base-uncased`
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:**
+- Epochs: 3
+- Learning rate: 2e-5
+- Batch size: 16
+- Max token length: 128
+- Random seed: 42
+- Hardware device: Apple Silicon GPU (`mps`), PyTorch 2.14.1
 
 **Anything I changed from the defaults, and why:**
+Kept the starter defaults (`epochs=3`, `lr=2e-5`, `batch_size=16`, `max_length=128`, `seed=42`). A max sequence length of 128 tokens captures the core premise and supporting thesis of Reddit discussion posts without imposing excessive padding overhead. The training run completed on `mps` in 8.55 seconds with train loss declining from 1.099 to 1.063 across 3 epochs.
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+**Split sizes:**
+- Total dataset: 207 examples (stratified 70% train / 15% val / 15% test)
+- Train split: 144 examples (`analysis`: 47, `hot_take`: 48, `reaction`: 49)
+- Validation split: 31 examples (`analysis`: 10, `hot_take`: 11, `reaction`: 10)
+- Test split: 32 examples (`analysis`: 10, `hot_take`: 11, `reaction`: 11)
 
-
+All three labels have at least 10 examples in the held-out test split (exceeding the recommended floor of 8), which ensures stable evaluation metrics across random seeds.
 
 ---
 
 ## How I Used AI
 
-<!-- Two specific moments — what you asked, what came back, what you changed.
-
-     ⚠️ Plus disclosure of any pre-labelling. If you had a model pre-label a
-     batch and then read and corrected every one, say that. It's an allowed
-     workflow and disclosing it costs you nothing. Not disclosing it is the
-     problem. -->
-
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked AI to generate 8 ambiguous, borderline movie discussion posts that sit on the boundary between `analysis` and `hot_take`, without pre-determining which label was correct.
+- *What came back:* The AI generated tricky cases, including posts asserting that an adaptation failed while quoting director interviews, and posts declaring a film philosophical garbage with heated rhetoric.
+- *What I changed:* I tightened my decision rule: if an author cites a checkable, verifiable fact (such as a specific scene, quote, or named production detail) to support their argument, the post is classified as `analysis` regardless of how provocative or emotional the tone is. Unsubstantiated value judgments remain `hot_take`.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I consulted AI to sanity-check realistic metric targets for a 3-label text classifier trained on ~200 examples, specifically asking for trade-offs between overall accuracy and per-label F1 scores.
+- *What came back:* An explanation that with ~10 test examples per class, a single misclassification swings a label's F1 by nearly 7–10 percentage points, making an aggressive target like 0.80 F1 across all labels prone to failure due to sampling noise.
+- *What I changed:* I set defensible criteria in `criteria.md`: an overall accuracy of 0.65, a macro F1 of 0.62, and a conservative per-label floor of 0.55 to guard against minority class collapse while accounting for sample variance.
 
 **Pre-labelling disclosure:**
+I used an automated rule-based heuristic to pre-label the bulk dataset (187 out of 207 posts), following a 20-post cold labeling pass performed completely by hand with no assistance (`cold` note). Every single pre-labeled post was subsequently reviewed, verified, and manually corrected against the taxonomy and hardest boundary decision rule before saving `labels.csv` (`pre-labelled, checked` note).
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
