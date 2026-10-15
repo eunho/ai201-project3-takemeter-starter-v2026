@@ -8,3 +8,4 @@
 analysis: Makes an argument about a film's quality, meaning, or production backed by a specific, checkable fact or scene detail.
 hot_take: A confident, contentious, or evaluative claim about a film, director, or cinematic trend with no verifiable evidence or breakdown offered.
 reaction: An immediate personal reflection, visceral emotional response, or open community query focused on feelings rather than constructing an argument.
+recommendation: A request for film suggestions based on specific tropes, moods, or themes, or a curated list recommending titles without evaluating an individual film's production or cinematic merit.

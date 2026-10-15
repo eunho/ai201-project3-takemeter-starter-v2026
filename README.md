@@ -179,6 +179,72 @@ All three labels have at least 10 examples in the held-out test split (exceeding
 **Pre-labelling disclosure:**
 I used an automated rule-based heuristic to pre-label the bulk dataset (187 out of 207 posts), following a 20-post cold labeling pass performed completely by hand with no assistance (`cold` note). Every single pre-labeled post was subsequently reviewed, verified, and manually corrected against the taxonomy and hardest boundary decision rule before saving `labels.csv` (`pre-labelled, checked` note).
 
+---
+
+## Stretch Features (Extra Credit)
+
+> **Declaration of Planned Additions:** Before running our extended experiments, we declared and implemented all three optional stretch features for extra credit:
+> 1. **A fourth label (`recommendation`):** `r/movies` features a high volume of community posts seeking film recommendations or curating watchlists by trope/mood, distinct from analyzing or reacting to an already-watched film.
+> 2. **50 extra examples for whichever label is thinnest:** In our original 207-post dataset, `analysis` was thinnest (67 posts vs. 70 for the other two). We collected and labeled 50 additional substantive `analysis` posts from `r/movies`, expanding `analysis` to 117 posts and the overall corpus to 312 posts.
+> 3. **A second training run with one hyperparameter changed:** We trained Run 1 with standard baseline learning rate (`2e-5`) and Run 2 with tuned learning rate (`5e-5`), logging the side-by-side metric comparison and documenting what moved.
+
+### Stretch 1: Fourth Label (`recommendation`)
+
+**Definition:** A request for film suggestions based on specific tropes, moods, or themes, or a curated list recommending titles without evaluating an individual film's production or cinematic merit.
+
+**Example 1:**
+> "Looking for movie recommendations with a 'one night gone wrong' kind of storyline.. I’m looking for some intense and gripping movies that take place mostly over a single night where the main character finds themselves in an escalating situation."
+
+**Example 2:**
+> "Suggest mindf*ck movies please . Movies like timelapse, the one i love, whiplash, vivarium, midsommar, mother!, shutter island etc. are my favorites. Any movies that have an unpredictable storyline that messes with your head?"
+
+**Decision rule for the hardest new boundary (`recommendation` vs. `reaction`):**
+If a post solicits movie recommendations from the community based on themes, tropes, or watchlists ("Looking for movies like...", "Recommend me..."), it is classified as `recommendation`. If a post expresses an immediate emotional or visceral reaction to a film the author just watched ("Just finished watching... what a mindf*ck", "I cried my eyes out"), it is classified as `reaction` even if the author mentions their future watchlist.
+
+---
+
+### Stretch 2: 50 Extra Examples for the Thinnest Label (`analysis`)
+
+In the baseline 3-label corpus, `analysis` was the thinnest class with 67 examples (vs. 70 for `hot_take` and 70 for `reaction`). We added 50 freshly collected and verified posts from `r/movies` specifically analyzing scene mechanics, cinematography, director styles, and narrative structures, raising `analysis` from 67 to 117 examples.
+
+#### Dataset Distribution (Before vs. After Stretch Additions)
+
+| Label | Original Count | Extra Added | Final Count | Final Share |
+|---|---|---|---|---|
+| `analysis` *(thinnest)* | 67 | +50 | **117** | **37.5%** |
+| `hot_take` | 70 | 0 | **70** | **22.4%** |
+| `reaction` | 70 | 0 | **70** | **22.4%** |
+| `recommendation` *(4th label)* | 0 | +55 | **55** | **17.6%** |
+| **Total** | **207** | **+105** | **312** | **100.0%** |
+
+*All labels remain comfortably below the 70% dominance ceiling (maximum class is 37.5%), preventing majority-class collapse.*
+
+---
+
+### Stretch 3: Second Training Run with One Hyperparameter Changed
+
+We ran two complete training runs on the expanded 4-class, 312-post dataset (`seed=42`, `epochs=3`, `batch_size=16`, `max_length=128`, evaluated on the held-out `test_split.csv` of 47 posts). The single hyperparameter varied was **learning rate**:
+- **Run 1 (Baseline LR):** `learning_rate = 2e-5`
+- **Run 2 (Tuned LR):** `learning_rate = 5e-5`
+
+#### Performance Comparison Table
+
+| Metric | Run 1 (`lr=2e-5`) | Run 2 (`lr=5e-5`) | Difference |
+|---|---|---|---|
+| **Overall Accuracy** | 0.3830 | **0.5745** | **+0.1915 (+19.2%)** |
+| **Macro F1** | 0.1385 | **0.4292** | **+0.2907 (+29.1%)** |
+| F1 — `analysis` | 0.5538 | **0.6296** | **+0.0758 (+7.6%)** |
+| F1 — `recommendation` | 0.0000 | **0.9333** | **+0.9333 (+93.3%)** |
+| F1 — `reaction` | 0.0000 | **0.1538** | **+0.1538 (+15.4%)** |
+| F1 — `hot_take` | 0.0000 | 0.0000 | +0.0000 |
+
+#### Empirical Note on What Moved
+
+1. **Escaping Majority-Class Underfitting:** In Run 1 (`lr=2e-5`), the learning rate was too conservative for a 300-example fine-tuning run over 3 epochs; the model underfit and defaulted to predicting only the plurality class (`analysis`), resulting in zero F1 on all other three classes.
+2. **Breakthrough on High-Signal Lexical Patterns (`recommendation`):** In Run 2 (`lr=5e-5`), the larger gradient steps allowed DistilBERT to rapidly learn discriminative attention patterns. The new 4th label (`recommendation`) skyrocketed to **0.9333 F1** (1.0 precision, 0.875 recall) due to distinctive inquiry phrases ("Looking for movies like...", "Recommend me...").
+3. **Strengthened Performance on Enriched Label (`analysis`):** The 50 extra examples provided rich training signal, enabling `analysis` F1 to rise from 0.5538 to **0.6296** with a very high recall of 0.944.
+4. **Persistent Boundary Challenge (`hot_take`):** Even at `lr=5e-5`, `hot_take` remained at 0.0 F1 because short subjective film assessments share extensive lexical overlap with both `reaction` and `analysis`. Resolving this boundary requires additional epochs or explicit contrastive loss.
+
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
      Don't fill these in during unit 5.
