@@ -90,48 +90,49 @@ If the post cites a specific, checkable fact from the film or its production (su
 
 ## The Dataset
 
-<!-- Where you collected from, how you labelled, your counts, and three hard
-     cases. -->
-
 **Where the posts came from:**
+Collected directly from `r/movies`, Reddit's primary public film discussion forum, sampling across hot, top (all time, year, month), and controversial threads. Non-discussion posts (ticket giveaways, academic surveys, news link aggregations) were filtered out to ensure only substantive user-authored text was retained.
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:**
+Cold first, AI pre-labelled second. The first 20 posts were labeled completely cold by hand with no assistance or AI tools to calibrate against the taxonomy and establish an honest annotator baseline (marked `cold` in `note`). The remaining 187 posts were pre-classified using an automated heuristic script encoding the taxonomy definitions, followed by a manual verification pass where each example was inspected, corrected, and reconciled against the decision rule (marked `pre-labelled, checked` in `note`).
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| `hot_take` | 70 | 33.8% |
+| `reaction` | 70 | 33.8% |
+| `analysis` | 67 | 32.4% |
+| **Total** | 207 | 100% |
 
 **Three hard cases**
 
-<!-- Any post that made you pause: what it was, which two labels it could have
-     been, and what you chose. These are worth more than the easy 190. -->
-
 **1.**
 > *The post:*
+> "What are your most hated movie plot contrivances? There are plenty, but the one that's top of mind for me today is Bad Boys (1995). Téa Leoni's character will only talk to Mike (Will Smith), but Mike isn't available, so Marcus (Martin Lawrence) impersonates him to earn her trust. And they keep this charade going for damn near the entire movie. I was just yelling at the screen."
 >
-> *Could have been:*
+> *Could have been:* `reaction` vs. `analysis`
 >
 > *I chose, because:*
+> While the post opens with a community prompt and concludes with emotional frustration ("yelling at the screen"), the core argument is anchored in a concrete, verifiable plot contrivance from *Bad Boys* (Marcus impersonating Mike to Téa Leoni's character). Because it cites checkable narrative mechanics rather than relying solely on sentiment, the decision rule designates it as `analysis`.
 
 **2.**
 > *The post:*
+> "What’s a remake you just can’t get into no matter how good it is? I’m not a purist, and there are some remakes I enjoy more or on par with original, such as Ringu/The Ring, Pocahontas/Avatar, Oceans 11, It, but I can’t get into The Departed because how good Infernal Affairs was. I mean the departed was nice, but I just can’t shake how exact the ripoff was. Are there any remakes that you just refuse to accept?"
 >
-> *Could have been:*
+> *Could have been:* `analysis` vs. `hot_take`
 >
 > *I chose, because:*
+> The post references specific film pairs (*The Departed* vs. *Infernal Affairs*), giving a surface appearance of comparative analysis. However, the author provides zero structural, cinematographic, or scene-level analysis, offering only the bare assertion that *The Departed* is an "exact ripoff" they refuse to accept. Because no checkable evidence is provided, it is classified as `hot_take`.
 
 **3.**
 > *The post:*
+> "Tommy Boy (1995) is a perfect Fall/Autumn movie. Ive always loved Tommy Boy. Grew up watching it constantly and still rewatch it once a year. One of my all time favorites. I never really noticed it or thought about it before, but im watching it tonight and it made me realize that i normally always rewatch it during the Fall season. Its really a perfect October movie."
 >
-> *Could have been:*
+> *Could have been:* `hot_take` vs. `reaction`
 >
 > *I chose, because:*
+> Although the post opens with a bold assertion ("Tommy Boy is a perfect Fall/Autumn movie"), it offers no atmospheric, thematic, or critical argument for that claim. The entire substance is a personal reflection on childhood viewing rituals and nostalgia ("watching it tonight and it made me realize that i normally always rewatch it"). Since it documents subjective viewing habit and personal feeling rather than an argued thesis, it is classified as `reaction`.
 
 ---
 
