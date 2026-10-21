@@ -286,29 +286,41 @@ Fine-tuning added meaningful discriminatory power where community language patte
 <!-- Five criteria across three seeds. The notebook's section 6 prints the
      spread table; the Target and Verdict columns are yours. -->
 
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.532 | 0.511 | 0.596 | 0.085 |
+| Macro F1 | 0.429 | 0.349 | 0.478 | 0.129 |
+| F1 — `analysis` | 0.630 | 0.618 | 0.706 | 0.088 |
+| F1 — `hot_take` | 0.000 | 0.000 | 0.000 | 0.000 |
+| F1 — `reaction` | 0.154 | 0.000 | 0.267 | 0.267 |
+| F1 — `recommendation` | 0.933 | 0.778 | 0.941 | 0.163 |
+
+*Hardware Device:* Apple Silicon GPU (`mps`), PyTorch 2.14.1. Accuracy moved 0.085 across seeds (within the 0.05–0.10 band: stable enough to observe trends, though minor class sampling variance is present).
+
+### Five Criteria Across Three Seeds
+
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | $\ge 0.65$ | 0.532 | 0.511 | 0.596 | MISSED |
+| 2. Macro F1 & per-label floor | Macro $\ge 0.62$, each $\ge 0.55$ | Macro 0.429 (min 0.000) | Macro 0.349 (min 0.000) | Macro 0.478 (min 0.000) | MISSED |
+| 3. Dataset distribution balance | Max $\le 45\%$, min $\ge 25\%$ | Min: 17.6% (`recommendation`) | Min: 17.6% (`recommendation`) | Min: 17.6% (`recommendation`) | MISSED |
+| 4. Annotator agreement | $\ge 70\%$ agreement with staff | 73.3% (22/30) | 73.3% (22/30) | 73.3% (22/30) | MET |
+| 5. High-confidence calibration | Accuracy $\ge 0.80$ when conf $\ge 0.80$ | 0.867 (most sure third) | 0.733 (most sure third) | 0.867 (most sure third) | MISSED |
 
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| true \ predicted | analysis | hot_take | reaction | recommendation |
+|---|---|---|---|---|
+| **analysis** | 17 | 1 | 0 | 0 |
+| **hot_take** | 9 | 0 | 2 | 0 |
+| **reaction** | 9 | 0 | 1 | 0 |
+| **recommendation** | 1 | 0 | 0 | 7 |
 
 **My biggest off-diagonal number, and what it means:**
-<!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
-     direction. "7 real analysis posts were called hot_take and only 3 went the
-     other way" is a direction, not just an error rate. -->
+The largest off-diagonal number is 9: 9 real `hot_take` posts and 9 real `reaction` posts were misclassified as `analysis`, while only 1 real `analysis` post was misclassified in reverse as `hot_take` (and 0 as `reaction`), showing a severe asymmetric failure where the model collapses uncertain subjective posts into the majority `analysis` class.
 
 
 
