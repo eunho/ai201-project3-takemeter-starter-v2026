@@ -362,7 +362,7 @@ The largest off-diagonal number is 9: 9 real `hot_take` posts and 9 real `reacti
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 26 / 30 = 87%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -386,23 +386,58 @@ The largest off-diagonal number is 9: 9 real `hot_take` posts and 9 real `reacti
 
 **1.**
 > *The post:*
+> "Times are down about 3% since the shoe rules changed, so obviously the shoes are the whole story and the sport has a problem."
 >
 > *Staff said / I said:*
+> Staff said `hot_take` / I said `analysis`
 >
 > *My call, and why:*
+> Staff is right. I saw the citation of a specific figure ("3% since the shoe rules changed") and mechanically tagged it as `analysis`. However, Decision Rule 1 directly addresses this exact formulation: the 3% figure is purely decorative on an unargued, exaggerated foregone conclusion ("so obviously the shoes are the whole story and the sport has a problem"). The number does not carry the argument; the sarcastic assertion does.
 >
 > *Which pile:*
+> Pile (a) — the rule covered it and I applied it loosely (a consistency problem).
 
 **2.**
 > *The post:*
+> "Three of us ran the same session on the same day, different shoes, within 10 seconds of each other over 5 miles. I'm not saying shoes do nothing, but whatever they do was smaller than the noise between three people."
 >
 > *Staff said / I said:*
+> Staff said `analysis` / I said `hot_take`
 >
 > *My call, and why:*
+> I think my call is right, revealing a genuine gap in the taxonomy. A single three-runner uncontrolled comparison over 5 miles is an informal anecdote, not a rigorous, checkable empirical finding. When the author explicitly admits that the shoe effect was "smaller than the noise between three people," the concluding claim ("whatever they do was smaller than the noise") is a speculative take grounded in personal noise rather than load-bearing evidence. The taxonomy does not specify the threshold where personal anecdote ends and checkable evidence begins.
 >
 > *Which pile:*
+> Pile (b) — the rule genuinely doesn't say (a gap in the definitions).
+
+**3.**
+> *The post:*
+> "Nobody actually enjoys the long run. They enjoy having done it, which is a completely different thing, and the sport would be more honest if it said so."
+>
+> *Staff said / I said:*
+> Staff said `hot_take` / I said `reaction`
+>
+> *My call, and why:*
+> I argue that my call is defensible. While the opening phrase mimics a universal proclamation ("Nobody actually enjoys..."), the substantive core of the post is an introspective examination of running psychology and personal post-run emotional relief ("enjoy having done it... would be more honest if it said so"). Under Rule 4 (tie-break based on what the post spends most of its words on), the author is unpacking visceral runner experience and feelings, making `reaction` a justifiable interpretation.
+>
+> *Which pile:*
+> Pile (c) — the rule is ambiguous here and my reading is defensible (a legitimate win).
+
+**4.**
+> *The post:*
+> "Just realised the shoes I set every PB in this year are the ones I bought by accident in the wrong size."
+>
+> *Staff said / I said:*
+> Staff said `reaction` / I said `hot_take`
+>
+> *My call, and why:*
+> My reading is defensible. Although the sentence opens with "Just realised" (giving a surface veneer of immediate personal reaction), the post functions rhetorically as a wry, provocative take lamponing the running community's obsessive obsession with shoe sizing and high-tech gear. It asserts an ironic insight about racing shoes rather than reporting acute emotional vulnerability or post-race exhaustion.
+>
+> *Which pile:*
+> Pile (c) — the rule is ambiguous here and my reading is defensible (a legitimate win).
 
 **What the pattern in my disagreements tells me:**
+The distribution of disagreements across the three piles highlights a critical annotator bias: I have a tendency to treat the mere mention of a numerical statistic as sufficient for `analysis` even when the number is used ornamentally to dress up an emotive `hot_take` (Pile a: `sp_014`), while simultaneously being overly skeptical of casual empirical observations by small groups (Pile b: `sp_010`). Furthermore, the boundary between general claims and personal reflections (Piles c: `sp_019`, `sp_029`) represents an inherent semantic ambiguity whenever authors frame their personal feelings as universal observations. This directly mirrors the primary model confusion observed in Milestone 2, where subjective film reactions were misclassified as `analysis` due to surface lexical overlap.
 
 
 
