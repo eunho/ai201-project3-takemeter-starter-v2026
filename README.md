@@ -245,10 +245,15 @@ We ran two complete training runs on the expanded 4-class, 312-post dataset (`se
 3. **Strengthened Performance on Enriched Label (`analysis`):** The 50 extra examples provided rich training signal, enabling `analysis` F1 to rise from 0.5538 to **0.6296** with a very high recall of 0.944.
 4. **Persistent Boundary Challenge (`hot_take`):** Even at `lr=5e-5`, `hot_take` remained at 0.0 F1 because short subjective film assessments share extensive lexical overlap with both `reaction` and `analysis`. Resolving this boundary requires additional epochs or explicit contrastive loss.
 
-<!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
+<!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════ -->
 
-     Don't fill these in during unit 5.
-     ═══════════════════════════════════════════════════════════════════ -->
+## Unit 6 Stretch Features Declaration (Extra Credit)
+
+> **Planned Stretch Features (Declared Before Starting):**
+> Before proceeding through the Unit 6 evaluation and retraining pipeline, we declare our commitment to complete all three optional stretch features for extra credit:
+> 1. **A Confidence Check:** Evaluating whether the model's confident predictions are right more often than its unsure ones (comparing accuracy and calibration above high-confidence thresholds vs. unsure thresholds).
+> 2. **A Second Improvement, Measured the Same Way:** Implementing a second distinct improvement beyond Milestone 5, retraining across all three seeds, and tabulating the side-by-side metric deltas.
+> 3. **A Per-Label Error Write-Up:** Providing an in-depth diagnosis and qualitative review of errors for whichever label demonstrates the weakest performance on the confusion matrix.
 
 ---
 
