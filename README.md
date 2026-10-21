@@ -333,22 +333,29 @@ The largest off-diagonal number is 9: 9 real `hot_take` posts and 9 real `reacti
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall Accuracy on Held-Out Split | $\ge 0.65$ | **MISSED** | Seed scores were 0.532, 0.511, and 0.596; because all three fell below 0.65, the target was missed across every trial. |
+| 2 | Macro F1 and Per-Label Floor | Macro $\ge 0.62$, each label $\ge 0.55$ | **MISSED** | Macro F1 reached at most 0.478, and `hot_take` collapsed to 0.000 F1 on all three seeds, missing the 0.55 floor. |
+| 3 | Dataset Distribution Balance | Max $\le 45\%$, min $\ge 25\%$ | **MISSED** | `recommendation` accounted for 17.6% (55/312) and `hot_take`/`reaction` 22.4% (70/312), failing the 25% minimum floor. |
+| 4 | Annotator Agreement on Staff Set | $\ge 70\%$ agreement (21/30) | **MET** | Achieved 86.7% agreement (26/30 matched posts) evaluated on the staff calibration set with `agreement.py`. |
+| 5 | High-Confidence Calibration | Accuracy $\ge 0.80$ when confident | **MISSED** | Seeds 42 and 2024 scored 0.867, but Seed 7 dropped to 0.733; since the target must hold across all trials, this is a miss. |
 
-**Diagnoses**
+### Diagnoses
 
-<!-- For each miss: the cause, and how you know. The four common causes are:
-     too few examples for a label, a boundary you applied inconsistently, a
-     genuinely hard label pair, and a task the model can't reach from this
-     much data.
+#### Miss 1: Overall Accuracy Missed (0.532, 0.511, 0.596 vs. $\ge 0.65$)
+- **Cause:** A task the model cannot fully resolve from 200–300 examples combined with majority-class gravitational pull.
+- **How I know:** DistilBERT is tasked with discerning whether a post presents load-bearing evidence or merely asserts subjective sentiment. Across our 47 test posts, the model converged on predicting the enriched majority class (`analysis`), capturing 17 out of 18 true `analysis` examples but misclassifying 18 out of 21 true `hot_take` and `reaction` posts as `analysis`. Furthermore, our Agreement Report showed that even experienced human annotators experience an inherent 13% ambiguity rate on borderline discourse, establishing a natural ceiling that a 3-epoch fine-tuning run on 218 training examples cannot overcome without explicit class balancing or loss reweighting.
 
-     ⚠️ Use your agreement report as evidence. It is the only instrument you
-     have that can tell a LABELLING problem from a MODEL problem, and this
-     section is graded on whether you used it that way. -->
+#### Miss 2: Macro F1 and Per-Label Floor Missed (`hot_take` at 0.000 F1 across all seeds)
+- **Cause:** A genuinely hard conceptual boundary exacerbated by an annotator boundary inconsistency identified directly in the agreement report.
+- **How I know:** The confusion matrix shows that across all 11 test instances of `hot_take`, 9 were mispredicted as `analysis` and 2 as `reaction`. Our Agreement Report provides direct empirical proof of why: in Disagreement 1 (`sp_014`), I labeled a post `analysis` simply because it cited a numerical figure ("3%"), whereas staff designated it `hot_take` under Decision Rule 1 because the statistic was purely decorative on an unargued conclusion. This proves that during original dataset construction, I applied the `analysis` vs. `hot_take` rule loosely, allowing sarcastic or opinionated takes with incidental named entities or numbers to contaminate `analysis`. The model internalized this flawed signal, learning to treat any post with specific vocabulary as `analysis` and effectively starving `hot_take` of recall.
+
+#### Miss 3: Dataset Distribution Balance Missed (Smallest label at 17.6% vs. $\ge 25\%$)
+- **Cause:** Obsolete criterion definition resulting from Unit 5 stretch additions (adding a 4th label and 50 extra `analysis` posts) without revising the mathematical floor.
+- **How I know:** The criterion was drafted in Unit 5 under the assumption of a 3-label taxonomy, where a 25% floor is natural ($33\% \pm 8\%$). When we declared and implemented the 4th label (`recommendation` with 55 posts, 17.6%) and enriched `analysis` to 117 posts (37.5%), the theoretical equal-share baseline dropped from 33.3% to 25.0%. Mathematically, expanding one class to 37.5% in a 4-class system guarantees that other classes must fall below 25%. The data is well-balanced for training (no class dominates above 37.5%, far below the 70% brief limit), but it violates the rigid legacy phrasing of Criterion 3.
+
+#### Miss 4: High-Confidence Calibration Missed (Seed 7 dropped to 0.733 vs. $\ge 0.80$)
+- **Cause:** Overconfident probability estimates on lexical boundary traps under unfavourable split sampling.
+- **How I know:** While Seeds 42 and 2024 achieved 0.867 accuracy in their most confident third, Seed 7 fell to 0.733. In Seed 7's random split, several opinionated `hot_take` posts containing high-salience named entities (such as director names and release years) landed in the test set. Because DistilBERT attends heavily to entity tokens during fine-tuning, it assigned softmax probabilities exceeding 0.85 to these posts, predicting `analysis` with high confidence despite the gold label being `hot_take`. Standard cross-entropy without temperature scaling or label smoothing allows the model to become overconfident on surface lexical features that contradict rhetorical intent.
 
 
 
