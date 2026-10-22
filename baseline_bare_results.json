@@ -1,0 +1,275 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 47,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": false,
+  "scores": {
+    "n": 47,
+    "accuracy": 0.3191489361702128,
+    "f1_macro": 0.32976827094474154,
+    "per_label": {
+      "analysis": {
+        "precision": 0.25,
+        "recall": 0.05555555555555555,
+        "f1": 0.0909090909090909,
+        "support": 18
+      },
+      "hot_take": {
+        "precision": 0.45454545454545453,
+        "recall": 0.45454545454545453,
+        "f1": 0.45454545454545453,
+        "support": 11
+      },
+      "reaction": {
+        "precision": 0.21739130434782608,
+        "recall": 0.5,
+        "f1": 0.30303030303030304,
+        "support": 10
+      },
+      "recommendation": {
+        "precision": 0.4444444444444444,
+        "recall": 0.5,
+        "f1": 0.47058823529411764,
+        "support": 8
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "The deer scene , the scene where welby hands the orange juice to dixon and POINTS THE STRAW, all the letters of Willoughby, Mildred when billboards were in fire - so many iconic and deeply humanizing scenes in this movie. I cried several times while watching it. I think everybody should watch it once.",
+      "gold": "reaction",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Anyone else hates it when their favourite horror/ thriller franchise turns into an art film?. I absolutely love a good horror/ thriller with jump scares and the ones which are procedural or investigative. After seeing two recent sequels to movies which I really love : Smile and 28 Years Later, I abhor how the horror has been sucked out just so the actors could show their acting skills. Don't get me wrong, I love Ralph Fiennes and Naomi Scott but I hate what that did to the story and its vibe. Same thing happened with Nosferatu and I could barely sit through it for 30 min before giving up. Are there any other horror / thriller sequels which got ruined for you because they brought in more famous actors?",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Krull (1983) is a tremendously fun sci-fi & fantasy mash-up. This is a movie I'd been aware of for years, it wasn't a cable staple though for me like The Beastmaster was. I decided to check out the recent restoration on Blu-ray & found it captivating. The plot concerns an alliance through marriage to unite two kingdoms against an alien threat in The Beast. Unsurprisingly he objects to the union. We go on a hero's journey to defeat him & rescue the Queen. This certainly isn't revolutionary material here. The film is populated with stock characters: the dashing hero, comic relief sidekick, wise old man & so on. There's very much a fairtytale element to all of it so I think it mostly works. It's helped immensely by how gorgeous the film is. The movie had a $30 million dollar budget & it shows. The costumes are gorgeous & the sets are elaborate. This new scan makes everything pop off the screen. The Beast's lair is a high point. The design has a strong H.R. Giger influence. Director of photography Peter Suschitzky lights it appropriately giving it the feel of a living organism. Unfortunately the villain himself is largely an offscreen presence & I think the film could have benefited from a more present antagonist. The Queen also gets short shrift as she's mostly a damsel in distress. It also suffers a bit from being a little too subdued in it's performances. This isn't like Flash Gordon where so many of the characters are big & brash. These are small gripes. The characters (though thin) are charming. There's many great set pieces before we get to the finale including a swamp of quick sand, giant spider's web, flying flame horses & more. All set to a great James Horner score. Overall it's just an old fashioned good time. Definitely worth going out of your way to watch.",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "I watched over 100 movies in the past half a year. Here's my TOP-10.. Harakiri - 1962, Japan, director Masaki Kobayashi It's amazing how a film about an old samurai telling his family story can be much more entertaining than any blockbuster film. 2. Come and See - 1985, USSR, Elem Klimov The most visceral portrayal of war I have ever seen with genuine horror by child actors who were scared senseless on the set of the film just because Klimov wanted the most realistic depiction of WW2. 3. Apocalypse Now - 1979, USA, Francis Ford Coppola An almost surreal movie about war and cult with fantastic soundtrack and Marlo Brando's colonel Kurtz is my favorite movie antagonist ever. 4. Wolfwalkers - 2020, Ireland, Tommy Moore, Ross Sterwart A beautiful cartoon with unique style and great environmental, anti-colonial and feminist messages (similar to Princess Mononoke). 5. The Great Dictator - 1940, USA, Charles Chaplin The final speech alone is a masterpiece, movie's anti-fascist pro-humanity message is timeless. 6. The Good, the Bad, and the Ugly - 1966, Italy, Sergio Leone Great cinematography and iconic soundtrack. 7. Schindler's List - 1993, USA, Stephen Spielberg The final scene with Oskar Schindler feeling regret that he couldn't save more Jews from the Holocaust brought me to tears. The Auschwitz scene is scarier than any horror. 8. Sherlock Jr. - 1924, USA, Buster Keaton Insanely innovative films which basically embodies what makes cinema such a great artform. 9. The Passion of Joan of Arc - 1928, France, Theodore Dreyer Insanely beautiful cinematography and fantastic gut-wrenching performance by the main actress. 10. The Banshees of Inishereen - 2022, Ireland, Martin McDonagh Amazing philosophical tragicomedy with fantastic performance by Colin Farrell. Probably the wittiest humor I have seen on screen.",
+      "gold": "analysis",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "The focus on plot and characterization in film criticism is completely misguided; movies aren't novels. I was listening to a podcast recently of a couple of film critics doing a retrospective on Lawerence of Arabia, and something that struck me was that after the podcast laid out the historical context surrounding the release of the film, about 95% of the discussion became centered entirely around plot and characters. They ended up having a pretty lukewarm reaction to the movie, and chalked up the film\u2019s reputation among filmmakers to nostalgia. It seems like most people who write about film for a living have a degree in English or journalism, which means that they tend to interpret movies through the prism they were taught to interpret literature through, and as a result tend to focus on the characteristics film shares with literature: characters, plot, and other narrative elements. There\u2019s an entire world of form that almost never gets brought up among these critics. I\u2019m referring to the things that separate film from other narrative media: the ability to communicate ideas through picture and sound. If David Lean\u2019s Lawrence of Arabia was translated directly and faithfully to a novel, of course it would be boring. It would have muddled characterization and odd pacing. But it\u2019s not a novel. It\u2019s a film, and because it\u2019s a film the sensual experience that the shots elicit are central to what it\u2019s trying to communicate. The editing, costume design, cinematography, blocking, and sound, are as central to the value of the film as Shakespeare\u2019s use of language was as central to the value of his plays. These elements aren\u2019t just decoration, they\u2019re a major source of creativity and artistry. I think oftentimes we enjoy a film due to these formal elements, but because we\u2019re taught that placing too much value on \u201caesthetics\u201d is shallow, we instead come up with plot and character elements we enjoyed post hoc in order to justify our enjoyment.",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Thoughts on UNICORN STORE (2017), directed by Brie Larson This is a fairly slight coming-of-age story in which Larson plays an art school washout, Kit, who has been obsessed with unicorns and their related aesthetic (rainbows, glitter) all her life. While navigating the corporate world in all its misery she is unexpectedly invited to a mysterious brick-and-mortar store that promises to furnish her with the actual titular creature. Kit just needs to prove herself worthy by setting up a safe home environment, which is challenging because of the ongoing tension with her parents (Joan Cusack and Bradley Whitford), whom Kit has moved back in with. On the bright side, this brings her into contact with Virgil (Mamoudou Athie), a hardware store employee who agrees to the task without knowing the exact nature of what he's gotten into. They share a nice chemistry, although I'm not exactly sure what about Kit is appealing to him other than that she looks like Brie Larson. As construction proceeds in Kit's parents' backyard, it helps dovetail the unicorn-store storyline with that of Kit and her family. I would have preferred spending the rest of the movie with this group of characters and never going back to the office, where I don't think the screenplay tells us anything we haven't already learned from other movies about corporate America (ie, it kills the artistic spirit; it's got creepy male managers who take advantage of female subordinates). These scenes are shot in a bloodless, depressing tone that I'm sure was on purpose, but this also made the first half of the film drag. Similarly, I wasn't a fan of one very fundamental aspect of the casting, but I understand the why's behind it--namely, Larson in the lead. Although Kit's age is never specifically mentioned, I had trouble buying her as someone who, presumably, would be in her early 20s and a relative newbie to the wider world. Admittedly, Kit does have a certain psychological complexity that Larson effectively conveys, and she's a big movie star, which makes me wonder if the film would have even gotten made had she opted to play one of the supporting characters instead. Not to take anything away from Samuel L. Jackson as the Willy Wonka-ish unicorn store owner, but I think Larson would have been just as interesting in that role. To her credit, as a director, Larson is consistent in her tone throughout: This is a tale full of whimsy, but everyone plays it with dead seriousness, and as a result there are moments towards the end with genuine poignancy that we least expect. I don't recommend this film wholeheartedly, but it's nice enough as a 90-minute diversion, and Larson shows enough potential behind the camera that if she makes another movie at some point, I'd check it out.",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "After Prey (2022), I wish Predator had gone all in on historical settings. I really think the franchise had an opportunity to do 2-3 serious historical Predator movies instead of returning to the usual modern day setting. drop a Predator into completely different eras, let's say Spartans, samurai or vikings... etc, but the important part is that they shouldn't all feel like Prey with different costumes, each movie should have its own identity and conflict.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "A brutally honest review of Digger(2026)[NO SPOILERS]. Digger is not an easy watch. It is exhausting and requires your attention throughout its runtime. Most people who have seen or will see the movie will acknowledge that it is not everyone\u2019s cup of tea. That being said, it is the type of movie that is important for cinema because it does not have a straightforward narrative. It is creative and unhinged. It is satire at its finest\u2014satire on an important topic. Let me list the things that work: The writing is top-notch. For a movie with so many dialogues, writing is crucial. The standout scenes that will be talked about and praised heavily rely on the writing, and Digger executes these scenes exceptionally well. The acting is super impressive. Tom Cruise nails it, as do Riz Ahmed and John Goodman. Throughout the movie, you almost forget that Digger is Tom Cruise. Makeup plays a role in that, but it is primarily because he plays the role so brilliantly. A speech that he gives had me locked in for every second; it was so intense and so well done. The comedy is good. While not many scenes will make you laugh out loud, a few will, and the rest make you chuckle a lot. The twist, which I initially couldn't figure out the purpose of or where it was leading until halfway through the movie, made so much sense after the ending. It makes the film much more satirical and deeper. It also eventually leads to an impactful and somewhat haunting ending. The cinematography is pretty good. It features a very grayish look, almost as if it is portraying the drained, bleak lives of the billionaires and the president shown in the movie. Other than these, if I had to point out things that do not work, I don't think I really could, except, as I said, it is exhausting. I think the movie achieves everything that it tries to achieve. Let me know in the comments, though, if you could point out some flaws. My rating - 7.8/10",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Who else misses director commentary versions of movies from the DVD era? (Additionally, any other things from the past that we miss with film)?. First off, I'm not a film student or anything so forgive me if this is the wrong forum but the movies subreddit doesn't allow people to write text posts with body so I'm posting here. My fellow old people who's year of birth starts with \"1\" will probably remember that during the tragically brief 10ish year period that Dvds were the most common medium to watch movies at home on will remember this: on most DVD menu options there was a \"director's commentary edition\" where you could watch the movie with the director and (usually) a person of their choosing who also worked on the movie talk about what filming each scene you're watching was like and the background about to how it came together. Sometimes the director might wander off on a tangent about something like selling the producers on the idea for the movie but most of it was scene-by-scene. I was that weird kid who always tried to sell my friends on the idea of watching the director's cut back-to-back after the movie because that was as entertaining as the movie itself to me. Am I alone in thinking that the era of home movies coming with a whole package experience like that was way too short, and we as a people have been robbed of director's commentaries since then? That maybe even technology reached its peak in the first decade of the new mellenium and then should have stopped developing? As a bonus question, does anyone remember movie related things from the past that you miss now?",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Surprisngly negative thoughts on Guardians of the Galaxy (2014) after watching it again this weekend. I really enjoyed GotG in the cinema this summer and I was really looking forward to seeing it again. So I was very surprised when I watched it this weekend and noticed that it's not really that good. At all. I think a lot of this has to do with being blow away by the new world and characters initially when I first saw it. I have never read a comic book in my life and although I've been catching up on some Marvel stuff at least on wikipedia whenever a new movie comes out, I knew next to nothing about the Guardians. So seeing it for the first time at the cinema, suddenly I was in this awesome, colorful, fun world with weird and amusing characters and a pumping soundtrack and lots of jokes. But this novelty has since worn off and I started seeing the movie's major faults. Villains are not the MCU's strongest suit and in this movie in particular the bad guy is there simply to be bad. Ronan was visually great but his motivations were underdeveloped. He wanted vengeance for something that happened god knows when off screen and he despised some sort of peace treaty that we only ever learned about from a character watching TV. In fact, practically every character's motivations for their actions were based on something that happened in the past and off screen. People hate Gamora because she's done bad things, but we never saw that. She betrays Ronan because she hates him for doing other bad things we didn't see. Drax wants to avenge a family we never met who died who knows when. Rocket apparently has some sort of painful Wolverine-being-experimented-on-esque past that is barely mentioned. And the movie goes out if its way to awkwardly set up Peter's alien father but it leads absolutely nowhere and I guess we'll have to wait for the sequel to find out anything relevant about it. The plot of the movie is also pretty thin. It's a very straightforward story about chasing the MacGuffin and I guess everybody in the movie has to make at least three deals with other people and get betrayed at least twice for the story to move forward. And all that to save (or destory, if you're looking at it from Ronan's perspective destroy) a city that's very pretty to look at but as an audience member I have absolutely no reason to care about Xandar at all. It's not even any of these characters' home (or is it? because the movie is vague on that part as well). I feel like GotG was a great way to launch a new franchise, because it's a simple and fun movie, but for the sequel they are going to have to come up with a much better story and give these characters more depth, otherwise it will just be a dumb movie with a talking racoon. ETA: sorry for the typo in the title",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "What is the greatest scene where a person very calmly is hyper competent?. Captain America in the elevator during winter soldier? Michael Corleone in the hospital telling his brother he won't panic and will save his father? John Wick in the bathhouse going about his business? What is the best scene where a character knows exactly what is about to happen and deals with it with foresight, skill, and badassery?",
+      "gold": "reaction",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Movies like Donnie Darko?. I\u2019m a big fan of psychological thrillers or movies that make you rethink everything in general. Any suggestions for movies like this or any movies that\u2019ll really make me rewind and say hold up will be awesome!",
+      "gold": "recommendation",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Movies like The Big Short, The Social Network, and Moneyball?. Looking for movies like The Big Short, The Social Network, and Moneyball. I\u2019m especially into movies based on real events/people, with smart characters, business/finance/tech, ambition, strategy, or people trying to build something against the odds. What are your best recommendations? Bonus points for underrated ones.",
+      "gold": "recommendation",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Stories from movies being filmed near each other?. I learned today that the Shining was at least partly filmed on the same studio lot as the Muppet Show (see the linked photo for Danny hanging out with Kermit the Frog), which made me wonder if there are an other stories people have heard of actors interacting on breaks between filming. I swear I've seen things like that before but it's frustratingly hard to google. https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lWr9kL0bCMyIGPThtUBfl_JakNdMDDKhBgJ7-FHARh9H1X8VdkY3UPKZ&s=10",
+      "gold": "analysis",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "What movies have a scene that is so tonally mismatched with the rest of the movie that it takes you out of the film?. My example would be the charming family friendly funny movie Shazam has a graphic scene of demons feasting on board room member that is like - why? Another person on another thread mentioned The Name of the Rose - which is a very cerebral historical mystery movie has a graphic sex scene between a peasant girl and a young lay assistant. It is jarringly out of place.",
+      "gold": "hot_take",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Digger non spoiler review I fell asleep, it is so annoying how they tell this story. It could have been a great story, yet they tell it in such a different and strange way, where it beats you over the head with it being a deep story. It wants to be this high class deep story, that it ignores being a good story. Its so frustrating because it could of been great yet they add all this unnecessary stuff that destroys the pacing, takes you out of the story and is boring. I get what it was trying to say with how they tell the story but they did not need to do all of this to say that. They could of just done both, they could of told the story the regular way and then at the end, talk about the subject which is in the twist, thats at the start of the film",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "New MPA/CARA Ratings and Reasons For The Week of Wednesday October 14, 2026.. G Daffy Season (ANIMATED SHORT SUBJECT ) Warner Bros. Pictures Animation PG Disney\u2019s \u201cHexed\u201d (ANIMATED) (for action and some rude humor.) Walt Disney Studios Motion Pictures Providence (Animated) (for action/peril) Viva Pictures Distribution, L.L.C. PG-13 Basement People (for thematic material and brief strong language.) Basement People L.L.C./Securus Technologies Namit Malhotra\u2019s \u201cRamayana\u201d (for sequences of strong violence and action, and some bloody images.) Columbia Pictures Paging Hezbollah (DOCUMENTARY) (for violent content/bloody images, thematic elements, brief language, and smoking.) Hammond Entertainment R 14th (Documentary) (for language.) Netflix, Inc. After The Silence (for language and some violence.) Well Go USA, Inc. Behemoth! (for language and sexual references.) Searchlight Pictures, Inc. Christmas At The Kringles (for some strong bloody violence, language, and some sexual material.) Briarcliff Entertainment Fjord (for language, full nudity and self-injury.) NEON November, 1963 (for language throughout, some strong/bloody violence, and sexual material.) Ketchup Entertainment Queens For A Day (for language and brief drug use.) Queens 4A Day, L.L.C./Ten Thirteen Productions \u2013 [Production Co.] Red, White & Royal Wedding (for sexual content/nudity and language.) Amazon MGM Studios",
+      "gold": "analysis",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "What are movies in which a side villain is better or more memorable than the main one?. This occurred to me while watching Django Unchained. Calvin is probably the main villain/antagonist, and while he is great, I honestly kind of liked Stephen more. I think that may be controversial, idk. I still think Calvin is a good villain with a good performance by DiCaprio, I love the skull scene as much as everybody else, but I deadass think Samuel L Jackson gave a better and more consistently great performance, and his character had a bit more depth in my opinion. I suppose you could argue Stephen is the main antagonist because he survives longer than Calvin, but he's initially presented as a side character compared to him. Are there any other cases where you liked a side antagonist more than the main antagonist?",
+      "gold": "analysis",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "girl movies that aren't feel good and rather very angry?. im not talking like pitch perfect, mean girls etc. films like black swan, the virgin suicides, maybe the substance? basically tumblr girl films \ud83d\ude2d",
+      "gold": "recommendation",
+      "predicted": "reaction"
+    },
+    {
+      "text": "The Rip and everything wrong with Netflix production. I've just finished watching it. The buzz was relatively promising, good trailer and incredible cast. But this is just another great example of what Netflix does, not movies, \"content\". Production value is abysmal: the editing, lighting, decors scream \"straight to DVD\" at best. The writing is convoluted for no good reason, from beginning to end. There are gaping plot holes. There are logic issues I can't even bother thinking about because, well, what's the point? I would feel bad for all the cast involved in this terrible movie but I'm sure they got well-paid for this 90min \"piece of content\" and I can't blame them for that. But I blame Netflix for making us believe we'd watch a good movie when it's really just the kind of things you'd find in the bargain bin of a gas station. I'm mad, peace.",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "CMV: Joker (2019) is only being considered an out-of-nowhere masterpiece because the general audience os culturally dumbed down by mainstream movies. Listen, I like movies as much as the next guy, but part of me is just slightly annoyed with the amount of praise that I see for the movie. Although I'll say it is a good movie, it isn't a breath of fresh air and most of all it didn't came out of nowhere. First of all, the Joker is some of the most known and well documented fictional characters of all time. Ence it would be fairly easy to make a compeling story about him to a seasoned writing professional. Many times there have been enticing portrayals of this character (Hamill, Nicholson, Ledger, etc.) partly due to the portrayal by the actor, but mostly due to decent writing. Secondly, it was expected already a good performance by Joaquin Phoenix. This is an actor that, even when not handling the best material, is quite exceptional. He has a fair share of remarkable acting credits under his belt (Her, Gladiator, The Master, You Were Never Really Here, etc.) and I don't recall any stinker. And lastly, the depiction of mental illness isn't something new, nor fresh, not groundbreaking. Silence of The Lambs came out in the 90s, Black Swan in 2010, Psycho came out in the 60s. That brings me to the end of this thesis. This movie is a good movie, nevertheless, but is being praised as an absolute masterpiece because people are so used to popcorn-munching blockbusters. Of course they were blown away by decent writing, decent acting and interesting themes. Because none of what they consume on a daily basis even compares to decent cinema.",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "What is the Best Film You Watched Last Week? (10/03/26 - 10/11/26). We invite you to share the best film you watched this week, whether it\u2019s a recent release, a classic you\u2019ve revisited or a film you finally got around to seeing. \u2014\u2014 RULES \u2014\u2014 1. Comments that only contain the title will be removed 2. ALWAYS use SPOILER TAGS 3. Explain why you liked said film",
+      "gold": "reaction",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "What is your most hated Christmas movie?. I\u2019ll start: Christmas Vacation. Literally every single character is vile beyond my worst imagining and every year I pray for the unrated cut where they activate the Event Horizon\u2019s gravity drive and all die gruesomely. Thus is my hatred for this absolute piece of crap, appropriately filled with human garbage like Chevy Chase and Randy Quaid.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "What movie genuinely motivated you to lock in?. I\u2019m 18 and wanna watch a movie that\u2019s genuinely gonna change me as a person and make me motivated to go to the gym, eat healthy and overall just be a good person I would be proud of. As of now I think there have been movies I\u2019ve enjoyed like pulp fiction or fight club which is up there but it didn\u2019t motivate me yknow? It was just a good movie. I honestly don\u2019t have a lot of movies that motivated me a lot with actual people in them but if we\u2019re talking in a show sense than my favorites were Gurren Lagann and Code Geass to give you a vibe of what kind of stuff I like",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "What do you think of Nolan's abilities as a writer?. I don't mean to start a hate jerkfest because I actually like him as a director. I think he has a lot of great qualities that give his directing a unique and original style. But when it comes to his writing skills, I find his inability to take risks or seek originality quite tiring. After watching the Oddissey I've distilled the things I dislike about his writing skills into a few distinct traits: Bland and sanitized: Historically, the greeks are notorious for some seriously disturbing and unnerving things. This felt like a Disney PG13 story. Clinical and safe: The twist that was added to Oddisseus was interesting but it never goes anywhere compelling. It's been done before in much better ways. Anemic: characters are bland and anemic. Every scene feels like sitting in a C-level suites board room discussing next corporate merger (yes, Anne can make it rain tears, so that's something). I don't know. Can we get Nolan a co-writer?",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "[recommendation] Samurai Vengeance (2026). I want to make a completely blank recommendation for people to watch Samurai Vengeance, a Japanese movie released this year. Go into it blind. It's really quite good, and I could not easily find discussion of it on reddit. Ah, 300 chars. Ok. It has Samurai. And it has revenge. Swords are involved.",
+      "gold": "recommendation",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Just watched Disclosure Day. I must say I was really disappointed by it. The movie was meaningless and meandering. It feels like Spielberg is out of touch with the Zeitgeist on sci-fi storytelling. He fell back in his decades-old formula and failed spectacularly on delivering on both, a compelling alien expos\u00e9 and a touching personal/emotional saga. The maddening simplicity of the details felt lazy and devoid of novelty. I kept asking myself at many points during the watching if I should change the channel and cut my losses. Spielberg sadly appears to think that he still has the same audience he had of The Close Encounter and ET. The sheer number of sci-fi movies and series on streaming services over the past 15 odd years has advanced the art of this genre far beyond that. Truly a lost opportunity by one of our generation\u2019s best movie makers. I would not recommend this movie even to a casual viewer. There are many better alternatives like Arrival, District 9, and Annihilation, among others to invest your time and well-earned money in.",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Looking for movie recommendations with a \u201cone night gone wrong\u201d kind of storyline.. I\u2019m looking for some intense and gripping movies that take place mostly over a single night where the main character (or a couple) gets lost, stranded, or caught up in an unexpected situation and things start going terribly wrong. I love those kinds of stories where the tension slowly builds up and the night just keeps getting darker like a regular trip or drive that suddenly turns into a nightmare. It should feel realistic, raw, and suspenseful, not over the top action or fantasy.",
+      "gold": "recommendation",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "What I sort of expect from VENOM. If you haven't heard, people are saying this movie isn't very good, and they're saying it's like a shitty nostalgia trip to 2003-2006's bad comic book movie misfires. And I've heard comparisons to Fant4stic, so, here's what I got! The story: A combination of Batman (1989) and Alien Resurrection The direction: A cross between Rogue One and Rob Zombie's Halloween The writing: Something between The Village and Transformers (2007) The acting: A bit of Signs with a sprinkle of Thor: The Dark World M. Night, lol",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "my ranking of all the theatrical muppet movies from my least favorite to my favorite. 8: muppets from space(1999) 7: muppet treasure island(1996) 6: muppets most wanted(2014) 5: the great muppet caper(1981) 4: the muppets(2011) 3: the muppet christmas carol(1992) 2: the muppet movie(1979) 1: the muppets take manhattan(1984)",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Looking for movies with a Black lead character where the plot isn't about race, slavery, politics or Black trauma in general. Please, no comedies or romances. A movies with a strong interesting black character, for exemple : The Equalizer. I'm mostly interested in serious movies, whether they're fantasy or something down to earth/grounded: (Fincher's The Killer or Split). As long the main character doesn't lead an mundane existence, im in. EDIT: Thanks for all replies, and an extra big thanks to those who actually took the time to read my entire post and recommended films that TRULY fit my criteria and helped me to find some hidden gems (The Transfiguration, for example) I say this 'cause literally, half the comments just repeat what others have said, some recommend movies that CLEARLY don't fit my criteria and others just wanted to argue lol. Making this post made me realize that denzel and others big actors, have a lot of films with this vibe, i never paid CLOSE attention to that before haha. I should've said to not include denzel etc, to leave the room for lesser-know good movies, but the post already blown up by then lol, For anyone wondering why i made this request, here some great posts/replies that explain it far better than i ever could: https://www.reddit.com/r/blackgirls/s/izjX4p8141 https://www.reddit.com/r/blackladies/s/oEhzUEtsTp https://www.reddit.com/r/CharacterRant/s/Tvvm0A4Qq0 https://www.reddit.com/r/CharacterRant/s/npCitj0c04",
+      "gold": "recommendation",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Never understood the hate for M. Night Shyamalan\u2019s The Village.. His movies are definitely hit or miss, but I never understood why this movie gets so much hate. It does definitely seem like people either love it or hate it with no in between. Personally I always loved it, I felt like the atmosphere, music, and overall world building was done fantastically. The twists and deceptions were done well in my opinion and first time viewers never see them coming. My biggest gripe was the \u201cbig reveal\u201d of \u201cthose who we do not speak of\u201d. It was definitely intended to be an intense scene but the monster was shown just a bit too, well frontally and directly lol. But that\u2019s really my only complaint. Never understood why so many people hated on this movie so much. Sure Shyamalan did make some questionable films (i.e. ATLA, and a few others..) but I never really felt like this was one. Curious to see what some of y\u2019all\u2019s opinions are.",
+      "gold": "hot_take",
+      "predicted": "reaction"
+    },
+    {
+      "text": "The end of inception is an insanely accurate representation of waking from a rough dream. Like, holy crap i felt the intensity every minute through. I still knew it was a big heist in a dream -- spoiler alert thats kind of the plot -- but as someone who has vivid dreams, cobb waking up on the plane in distress only to be met with the flight attendant \"do you need immigration forms sir?\" \"Thank you\" Its insanely accurate. The whole plot is based around this intense dream and after going through frickin' hell and back, lo and behold, you're awake. Back to normal. I know in-universe cobb got home to his kids and destroyed Fischer's empire, so it had HUGE repercussions. It wasnt really just a dream * But the whole concept of a dream was fleshed out unbelievably well in this movie. You know its bs, it fleshes the plot out so you forget its bs and take it seriously-- THEN BAM. You're woken up on a flight.",
+      "gold": "reaction",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "What movie would be rewatchable if it wasn\u2019t for one scene???. For me it would be \u2018Saving Private Ryan\u2019 at the end of the movie when Mellish is fighting the German soldier with a knife and Upham is so paralyzed with fear that he lets the German kill Mellish when he easily could\u2019ve just walked up to the German and shot him. It\u2019s just really tough to watch. The whole time you\u2019re thinking that Upham will eventually snap out of it and help his friend, but he never does.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "I\u2019ve been thinking about this lately\u2014why does modern propaganda feel so exhausting to sit through compared to older stuff? When you look back at older films, whether it\u2019s Soviet cinema like Battleship Potemkin, classic Hollywood or even 80s Cold War hype like Top Gun, they were genuinely great movies. You might completely disagree with the politics behind them, but the filmmaking was still incredible. They knew how to hide the message inside something entertaining. The pacing was sharp, the emotional beats worked, and the visuals actually pulled people in. Now when a movie tries to push a strong political or ideological message, it often feels painfully obvious. Everything feels flat, preachy, and weirdly lifeless. Instead of telling a compelling story and letting the message land naturally, a lot of scripts feel like they\u2019re trying to lecture the audience. It ends up feeling more like an expensive HR training video than an actual movie. So what changed? Did director lose the ability to make propaganda that\u2019s actually compelling because everything is run by corporate committees now? Or has the internet made people too skeptical and media-aware to buy into these kinds of narratives the way audiences used to?",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "I recall watching Miss Stevens in 2017, and Timothee Chalamet's monologue made me go \"Wow! What an actor!\" Another example is Carey Mulligan in Doctor Who, she starred in my favourite episode of the show (Blink). The episode is a masterpiece but I was particularly impressed by how Mulligan carried that episode. Can you recall any actors who, the first time you saw them in an early role, made you think they are going to kill it in the industry?",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Anybody seeing the movie this Friday and if so, how hyped are you? Personally I\u2019m just hoping at the very least that this movie is entertaining, it can be cheesy, campy whatever but it can\u2019t be boring but we\u2019ll see on Friday. What are your thoughts and opinions regarding this film, are you excited, worried or indifferent? \ud83e\udd14",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Hot Take : Django unchained is better than pulp fiction. I dont know why pulp fiction is this untouchable work in tarantino's discography everybody i talk with has it at number 1 automatically . Okay i have 3 reasons why . 1 . All the scenes in django are fantastic with no exeptions but on the other hand theres some scenes on pulp fiction that are annoying like the first scene of the couple at mcdonalds . 2 . The music in django is far better and fitting . 3. The story of django was told in far more intresting way .",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "WEIRD REQUEST: Looking for movies where you start with a guy working a boring and depressive office job. The 2 best examples I can think of on the top of my head - Fight Club (1999) - Wanted (2008) I know this is a very odd request, but these movies give me some sort of comfort?",
+      "gold": "recommendation",
+      "predicted": "reaction"
+    },
+    {
+      "text": "I understand the criticism of Ed and Lorraine Warren but I still think the first two Conjuring movies are great horror films.. I completely understand why people don\u2019t like Ed and Lorraine Warren and I\u2019m not here to defend them or their real-life claims. But if I look at The Conjuring movies purely as horror films, especially the first two, I genuinely think they\u2019re really good. They\u2019re creepy, entertaining, well-made and have some genuinely scary moments. I actually rewatch the first two at least once every year and I still enjoy them just as much. I also think Patrick Wilson and Vera Farmiga are fantastic in these movies. Their chemistry is great and I genuinely enjoy watching them play Ed and Lorraine, regardless of what I think about the real people. I\u2019ve seen people on here say they could easily live without The Conjuring franchise and that\u2019s fair. Everyone has different tastes. But as someone who genuinely loves the horror genre and watches a lot of horror movies, I feel like finding a really good, entertaining horror movie isn\u2019t always easy. I know the franchise has its flaws, especially the later movies but I still have a soft spot for it. I also genuinely enjoy the Annabelle movies, especially Annabelle: Creation. I know these movies aren\u2019t everyone\u2019s cup of tea but I find them entertaining and rewatchable. Anyone else feel the same way? I feel like the first two movies deserve some appreciation regardless of what people think about the real Warrens.",
+      "gold": "analysis",
+      "predicted": "reaction"
+    },
+    {
+      "text": "A few things that would've made the movie Mrs. Doubtfire better ... for me at least. Several of the deleted and extended scenes included: Daniel and Miranda's conversation with Gloria after the birthday party Two scenes when Daniel talks to Gloria in his disguise Daniel in his disguise walking past Mrs. Sellner who had just visited Miranda's house Lydia's spelling bee Daniel reveals to Gloria he is Mrs. Doubtfire Daniel and Miranda's argument after the restaurant where Lydia and Chris tell them they hate them and, along with Nattie, furiously running off If Daniel and Miranda got back together (Despite their actors asking and the movie director Chris Columbus planning otherwise), especially with Daniel having learned how to be a disciplinarian",
+      "gold": "analysis",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "Tommy Boy (1995) is a perfect Fall/Autumn movie. Ive always loved Tommy Boy. Grew up watching it constantly and still rewatch it once a year. One of my all time favorites. I never really noticed it or thought about it before, but im watching it tonight and it made me realize that i normally always rewatch it during the Fall season. Its really a perfect Autumn comfort movie. The leaves changing colors and falling from the trees. So many great shots of the outdoors that set the Fall vibe so well. The movie has a great small town, Mid-West in Autumn atmosphere. Peter Segal did a great job directing this one. Also always fun to note that it was written by Bonnie and Terry Turner, the same people who wrote Wayne's World and created That 70's Show and 3rd Rock From the Sun. Great job all around on this absolute classic. What are some other good Fall/Autumn movies?",
+      "gold": "reaction",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "I need a good \u201cwtf\u201d movie.. I am looking for a movie that makes me think, a real mind fuck, or a movie that makes me think \u201chow the fuck did someone come up with this\u201d. I am super into psychological thrillers or horror si-fi vibes but feel like I keep coming up empty handed with some of the movies I find on mainstream platforms. Anything recent or old! Just need some good suggestions!",
+      "gold": "recommendation",
+      "predicted": "reaction"
+    },
+    {
+      "text": "What are some bad points about The Shawshank Redemption? Imo (and a lot of others) The shawshank redemption is a near perfect movie. It is my fave movie ever and was also my fathers before he passed away. But I was just wondering if we can come up with any bad points like plot holes, mistakes, silly dialogue? I will start with one thing thing that I always thought was really silly is when Andy comes back from solitary after pulling the record stunt and Floyd says \"So they let you tote that record player down there huh?\". Come on floyd? Surely he is not that stupid to think they going to let him take a record player to solitary but he seems to be serious. EDIT: this post eventually got me added to the controversial club.",
+      "gold": "hot_take",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Wildwood underrepresentation?. Why does Wildwood feel almost completely unadvertised? I get nonstop promos for every big studio release, yet this movie (which actually looks like it has some real heart and style) barely shows up anywhere. I only just heard about it, and that\u2019s wild considering how much generic corpo ads get pushed in my feed daily. Is the studio barely marketing it, or is it getting drowned out by louder releases? Curious if anyone else noticed the lack of promotion or if I\u2019m just missing something.",
+      "gold": "hot_take",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Was the brightness unusually dark at your theater for Pan's Labyrinth 20th Anniversary?. I went to a Marcus theater in St Louis, and I noticed even without the 3D glasses, the shadows were solid black. Overall the film was projected exceptionally too dark to where you couldn't see details. The down vertical shot into the labyrinth well was pitch black and the bottom wasn't visible on screen when it absolutely is in the normal version. The management said it was the version they received and wouldn't take responsibility for the brightness. Can projectors brightness be changed? Did anyone else have trouble making out the details of the film due to extreme darkness?",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "What movie did you hate, but rewatched and really liked?. I saw Bringing Out The Dead when it was released in theaters in the 90s, and it was an awful experience for me. I hated the pacing, and somehow even the acting felt pretty flat to me. Recently I rewatched it and enjoyed it quite a bit, and the depth of it hit me pretty hard. So 30 years later I gave it a shot and found out maybe I was wrong.",
+      "gold": "reaction",
+      "predicted": "reaction"
+    }
+  ]
+}
