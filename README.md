@@ -310,7 +310,7 @@ Fine-tuning added meaningful discriminatory power where community language patte
 | 1. Overall accuracy | $\ge 0.65$ | 0.532 | 0.511 | 0.596 | MISSED |
 | 2. Macro F1 & per-label floor | Macro $\ge 0.62$, each $\ge 0.55$ | Macro 0.429 (min 0.000) | Macro 0.349 (min 0.000) | Macro 0.478 (min 0.000) | MISSED |
 | 3. Dataset distribution balance | Max $\le 45\%$, min $\ge 25\%$ | Min: 17.6% (`recommendation`) | Min: 17.6% (`recommendation`) | Min: 17.6% (`recommendation`) | MISSED |
-| 4. Annotator agreement | $\ge 70\%$ agreement with staff | 73.3% (22/30) | 73.3% (22/30) | 73.3% (22/30) | MET |
+| 4. Annotator agreement | $\ge 70\%$ agreement with staff | 86.7% (26/30) | 86.7% (26/30) | 86.7% (26/30) | MET |
 | 5. High-confidence calibration | Accuracy $\ge 0.80$ when conf $\ge 0.80$ | 0.867 (most sure third) | 0.733 (most sure third) | 0.867 (most sure third) | MISSED |
 
 ### Confusion matrix
